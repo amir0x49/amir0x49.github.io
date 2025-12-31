@@ -102,46 +102,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // تغییر محتوا از منو
-    const files = {
-        about: "Texts/About.html",
-        contact: "Texts/Contact.html",
-        order: "Texts/Order.html",
-        support: "Texts/Support.html",
-        extra: "Texts/Extra.html",
-        blog: "Texts/Blog.html",
-        projects: "Texts/Projects.html"
-    };
 
     const buttons = document.querySelectorAll(".menub");
 
     buttons.forEach(btn => {
-        btn.addEventListener("click", function(e) {
-            e.preventDefault();
+  btn.addEventListener("click", function(e) {
+    e.preventDefault();
 
-            // حذف active از همه
-            buttons.forEach(b => b.classList.remove("active"));
-            this.classList.add("active");
+    buttons.forEach(b => b.classList.remove("active"));
+    this.classList.add("active");
 
-            const key = this.dataset.page;
+    const key = this.dataset.page;
+    const template = document.getElementById("template-" + key);
 
-            fetch(files[key])
-                .then(res => {
-                    if (!res.ok) throw new Error("HTTP error " + res.status);
-                    return res.text();
-                })
-                .then(data => {
-
-                    box.innerHTML = data;
-                    setTimeout(() => {
-                    refreshScroll(); // بعد از 50ms، scrollHeight درست اندازه‌گیری می‌شود
-                    }, 50);
-
-                })
-                .catch(err => {
-                    box.textContent = "Error loading content: " + err.message;
-                    refreshScroll();
-                });
-        });
-    });
+    if(template){
+      box.innerHTML = "";
+      box.appendChild(template.content.cloneNode(true));
+      setTimeout(() => refreshScroll(), 50);
+    }
+  });
 });
+
+});
+
 
