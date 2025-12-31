@@ -118,21 +118,22 @@ backdrop-filter: blur(8px);
 /* Regular */
 @font-face {
     font-family: 'Calibri';
-    src: url('fonts/CALIBRI.ttf') format('truetype');
+    src: url('../fonts/CALIBRI.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Calibri';
-    src: url('fonts/CALIBRIL.ttf') format('truetype');
+    src: url('../fonts/CALIBRIL.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Calibri';
-    src: url('fonts/CALIBRIB.ttf') format('truetype');
+    src: url('../fonts/CALIBRIB.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
+
 
 
