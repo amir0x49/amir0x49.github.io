@@ -96,48 +96,31 @@ document.addEventListener("DOMContentLoaded", function() {
         isDragging = false;
     });
     // تغییر محتوا از منو
-var files = {
-    about: "Texts/About.html",
-    contact: "Texts/Contact.html",
-    order: "Texts/Order.html",
-    support: "Texts/Support.html",
-    extra: "Texts/Extra.html",
-    blog: "Texts/Blog.html",
-	projects:"Texts/Projects.html"
-};
 
-var buttons = document.querySelectorAll(".menub");
+    document.querySelectorAll(".menub").forEach(btn => {
+        btn.addEventListener("click", e => {
+            e.preventDefault();
 
-for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", function(e) {
-        e.preventDefault();
+            // remove active from all buttons
+            document.querySelectorAll(".menub.active").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
 
-        // حذف active از همه لینک‌ها
-        for (var j = 0; j < buttons.length; j++) {
-            buttons[j].classList.remove("active");
-        }
+            const key = btn.dataset.page;
+            const tpl = document.getElementById(key);
+            if(!tpl) {
+                box.textContent = "Content not found.";
+                return;
+            }
 
-        // اضافه کردن active به لینک کلیک شده
-        this.classList.add("active");
-
-        var key = this.dataset.page;
-
-        fetch(files[key])
-    .then(function(response) {
-        if (!response.ok) throw new Error("HTTP error " + response.status);
-        return response.text();
-    })
-    .then(function(data) {
-        box.innerHTML = data;   // ← اینجا innerHTML به جای textContent
-        box.scrollTop = 0;
-        updateRangeMax();
-        drawBackground(0);
-    })
-    .catch(function(err) {
-        box.textContent = "Error loading content: " + err.message;
+            box.innerHTML = "";
+            box.appendChild(tpl.content.cloneNode(true));
+            box.scrollTop = 0;
+        });
     });
 
-    });
-}
+    // show first tab by default
+    const first = document.querySelector(".menub");
+    if(first) first.click();
 
 });
+
