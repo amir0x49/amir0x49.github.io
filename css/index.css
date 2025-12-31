@@ -121,6 +121,10 @@ H1 {
 #tbox * {
 	margin-top: 0;
 }
+.tbox p, .tbox span, .tbox div {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 /* Fonts */
 @font-face {
@@ -166,3 +170,4 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
