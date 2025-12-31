@@ -4,6 +4,7 @@ body {
 	background: #464646;
 	text-align: left;
 	direction: rtl;
+	  font-family: 'Calibri', sans-serif;
 }
 .menu {
 	text-decoration: none;
@@ -101,4 +102,25 @@ backdrop-filter: blur(8px);
 }
 #tbox *{
 	margin-top: 0;
+
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/CALIBRI.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/CALIBRIL.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/CALIBRIB.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
