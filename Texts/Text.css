@@ -2,11 +2,13 @@
 /* CSS Document */
 
 .cont{
-	text-align: left;
+	text-align: center;
 	color: black;
+	font-family: 'Calibri';
 }
 bold{
 	font-family: 'Calibri';
+	font-size: 50px;
 	font-weight: 700;
 }
 @font-face {
@@ -27,9 +29,3 @@ bold{
     font-weight: 700;
     font-style: normal;
 }
-
-
-
-
-
-
