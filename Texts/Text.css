@@ -4,28 +4,12 @@
 	margin-top: 0;
 }
 .cont{
-	text-align: center;
-	color: red;
+	text-align: left;
+	color: nlack;
 }
 bold{
 	font-family: 'Calibri';
 	font-weight: 700;
 }
-@font-face {
-    font-family: 'Calibri';
-    src: url('fonts/CALIBRI.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Calibri';
-    src: url('fonts/CALIBRIL.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Calibri';
-    src: url('fonts/CALIBRIB.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
+
+
