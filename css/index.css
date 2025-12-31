@@ -5,6 +5,10 @@ body {
 	text-align: left;
 	direction: rtl;
 	  font-family: 'Calibri', sans-serif;
+	font-weight: 400;
+}
+a {
+font-weight:400;
 }
 .menu {
 	text-decoration: none;
@@ -124,3 +128,4 @@ backdrop-filter: blur(8px);
     font-weight: 700;
     font-style: normal;
 }
+
