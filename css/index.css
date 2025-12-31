@@ -99,7 +99,7 @@ H1 {
 	white-space: pre-line;
 	text-align: justify;
 	padding: 15px;
-	background-color: rgba(173, 216, 230, 1); /* پس زمینه ساده */
+	background-color: rgba(173, 216, 230, 0.5); /* پس زمینه ساده */
 	background-filter: blur(50px);
 	-webkit-backdrop-filter: blur(8px);
 	backdrop-filter: blur(8px);
@@ -172,6 +172,7 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
 
 
 
