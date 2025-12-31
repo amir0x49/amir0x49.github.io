@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
     this.classList.add("active");
 
     const key = this.dataset.page;
-    const template = document.getElementById("template-" + key);
+    const template = document.getElementById(key);
 
     if(template){
       box.innerHTML = "";
@@ -124,5 +124,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 });
+
 
 
