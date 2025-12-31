@@ -130,8 +130,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     return res.text();
                 })
                 .then(data => {
+
                     box.innerHTML = data;
-                    refreshScroll(); // مهم: رفرش scroll و highlight
+                    setTimeout(() => {
+                    refreshScroll(); // بعد از 50ms، scrollHeight درست اندازه‌گیری می‌شود
+                    }, 50);
+
                 })
                 .catch(err => {
                     box.textContent = "Error loading content: " + err.message;
@@ -140,3 +144,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
