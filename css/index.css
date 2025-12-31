@@ -1,140 +1,168 @@
 @charset "utf-8";
 /* CSS Document */
+
 body {
 	background: #464646;
 	text-align: left;
 	direction: rtl;
-	  font-family: 'Calibri', sans-serif;
+	font-family: 'Calibri', sans-serif;
 	font-weight: 400;
 }
-div{
-	font-weight:400;
+
+div {
+	font-weight: 400;
 }
+
 a {
-font-weight:400;
+	font-weight: 400;
 }
+
 H1 {
-	font-weight:700;
+	font-weight: 700;
 }
+
 .menu {
 	text-decoration: none;
 	display: inline-flex;
 	flex-direction: column;
-	text-decoration-color:black;
+	text-decoration-color: black;
 	font-size: 20px;
 	gap: 10px;
 	outline: none;
 }
+
 .menub:link,
-.menub:visited{
+.menub:visited {
 	background-color: black;
 	padding: 5px 12px;
 	text-decoration: none;
-	color:darkgray;
+	color: darkgray;
 	text-align: center;
 	border-radius: 4px;
 	outline: none;
 }
+
 .menub:hover,
-.menub:focus{
+.menub:focus {
 	background-color: darkred;
-	color:white;
+	color: white;
 	outline: none;
 }
-.menub.active{
-	    background-color: lightblue; /* یا همون رنگ hover */
-    color: Black;
-    outline: none; /* مهم */
+
+.menub.active {
+	background-color: lightblue; /* یا همون رنگ hover */
+	color: black;
+	outline: none; /* مهم */
 }
-.H1{
+
+.H1 {
 	text-align: center;
 	margin-bottom: 50px;
 	margin-top: 150px;
 }
 
-/* کل اسکرول */
+/* Scrollbar سفارشی */
 .tbox::-webkit-scrollbar {
-  width: 18px;             /* ضخامت اسکرول */
-  background: #f0f0f0;    /* رنگ پس‌زمینه نوار */
-  border-radius: 4px;
+	width: 18px;
+	background: #f0f0f0;
+	border-radius: 4px;
 }
 
-/* خود نوار قابل حرکت (thumb) */
 .tbox::-webkit-scrollbar-thumb {
-  background-color: #888; /* رنگ خود اسکرول */
-  border-radius: 4px;     /* گردی گوشه‌ها */
-  border: 4px solid #f0f0f0; /* فاصله از کناره‌ها */
+	background-color: #888;
+	border-radius: 4px;
+	border: 4px solid #f0f0f0;
 }
 
-/* وقتی موس روی اسکرول رفت */
 .tbox::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+	background-color: #555;
 }
 
+/* Layout */
 .layout {
-  display: flex;
-  gap: 30px;          /* فاصله منو و باکس */
-  align-items: flex-start;
+	display: flex;
+	gap: 30px;          /* فاصله منو و باکس */
+	align-items: flex-start;
 	margin-right: 300px;
-
 }
 
-
+/* Content Box */
 .tbox {
-  width: 600px;
-  height: 300px;
-  border: 1px solid black;
-  overflow-y: hidden;
-  border-radius: 10px;
-  position: relative;
- direction: ltr;
+	width: 600px;
+	height: 300px;
+	border: 1px solid black;
+	overflow-y: hidden;
+	border-radius: 10px;
+	position: relative;
+	direction: ltr;
 	white-space: pre-line;
 	text-align: justify;
 	padding: 15px;
-  background-color: rgba(173, 216, 230, 0.5); /* پس زمینه ساده */
-	background-filter :blur(50px) ;
+	background-color: rgba(173, 216, 230, 0.5); /* پس زمینه ساده */
+	background-filter: blur(50px);
 	-webkit-backdrop-filter: blur(8px);
-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
 }
 
-
+/* Canvas و Range */
 #chartCanvas {
-  display: block;
-
-  width: 20px;
-  height: 330px; /* نمودار بلند */
+	display: block;
+	width: 20px;
+	height: 330px; /* نمودار بلند */
 }
+
 #scrollRange {
-  height: 300px; /* ارتفاع برابر با canvas */
-  writing-mode: bt-lr; /* عمودی شدن range */
-  -webkit-appearance: slider-vertical;
-  margin-left: 0;
+	height: 300px; /* ارتفاع برابر با canvas */
+	writing-mode: bt-lr; /* عمودی شدن range */
+	-webkit-appearance: slider-vertical;
+	margin-left: 0;
 }
-#tbox *{
+
+#tbox * {
 	margin-top: 0;
-
 }
 
-/* Regular */
+/* Fonts */
 @font-face {
-    font-family: 'Calibri';
-    src: url('../fonts/CALIBRI.TTF') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+	font-family: 'Calibri';
+	src: url('../fonts/CALIBRI.TTF') format('truetype');
+	font-weight: 400;
+	font-style: normal;
 }
+
 @font-face {
-    font-family: 'Calibri';
-    src: url('../fonts/CALIBRIL.TTF') format('truetype');
-    font-weight: 300;
-    font-style: normal;
+	font-family: 'Calibri';
+	src: url('../fonts/CALIBRIL.TTF') format('truetype');
+	font-weight: 300;
+	font-style: normal;
 }
+
 @font-face {
-    font-family: 'Calibri';
-    src: url('../fonts/CALIBRIB.TTF') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+	font-family: 'Calibri';
+	src: url('../fonts/CALIBRIB.TTF') format('truetype');
+	font-weight: 700;
+	font-style: normal;
 }
 
+/* Content text */
+.cont {
+	color: #333;
+	line-height: 1.6;
+}
 
+.title {
+	font-size: 24px;
+	font-weight: 700;
+	display: block;
+	margin-bottom: 10px;
+}
 
+/* لینک‌ها داخل متن */
+a {
+	color: #0066cc;
+	text-decoration: none;
+}
 
+a:hover {
+	text-decoration: underline;
+}
