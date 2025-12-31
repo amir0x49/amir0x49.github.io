@@ -113,11 +113,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             box.innerHTML = "";
+            box.appendChild(tpl.content.cloneNode(true));
             box.scrollTop = 0;
             updateRangeMax();
             drawBackground(0);
-            box.appendChild(tpl.content.cloneNode(true));
-            box.scrollTop = 0;
         });
     });
 
@@ -126,5 +125,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if(first) first.click();
 
 });
+
 
 
