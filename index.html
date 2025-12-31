@@ -4,38 +4,84 @@
 <meta charset="utf-8">
 <title>AMIR0X49</title>
 <link rel="stylesheet" href="css/index.css">
-
-
-
 </head>
 
-	
 <body>
-	<h1 class="H1">This is amir0x49</h1>
+<h1 class="H1">This is amir0x49</h1>
 
+<div class="layout">
+    <canvas id="chartCanvas"></canvas>
+    <input type="range" id="scrollRange" min="0" max="100" value="0" orient="vertical">
 
-	
-	<div class="layout">
-		  <canvas id="chartCanvas">
-		<input type="range" id="scrollRange" min="0" max="100" value="0" orient="vertical">
- 
-		</canvas>
-		<div class="tbox" id="contentBox">Integer convallis arcu ac lacus cursus ultricies. Donec in vulputate lectus, a condimentum orci. Nunc rhoncus lectus ut dui gravida dignissim nec sed purus. Proin quis auctor nibh. Nam a felis id turpis accumsan maximus a non velit. Phasellus at viverra arcu, in sagittis urna. Donec vel sapien non est consequat volutpat. Sed nec justo tempus, bibendum augue sed, luctus odio.\nInteger a porta mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus mollis vestibulum quam, a sagittis nunc fringilla quis. Aliquam in metus quis tellus dapibus lacinia. In tincidunt dui ac augue elementum aliquam. Praesent facilisis purus ut vestibulum accumsan. Phasellus nec maximus lacus, at tristique dolor. Nunc lorem nulla, semper sit amet tortor quis, auctor condimentum lacus. Donec eleifend neque sem, non volutpat ligula lobortis in. Proin in quam leo. Praesent posuere orci sem. Aliquam facilisis lacinia porttitor.
+    <div class="tbox" id="contentBox">
+        <p>Click on Smth...</p>
+    </div>
 
-		</div>
-	<nav class="menu">
-	<a href="#" class="menub" data-page="about">About Me</a>
-	<a href="#" class="menub" data-page="contact">Contact Me</a>
-	<a href="#" class="menub" data-page="order">Order</a>
-	<a href="#" class="menub" data-page="support">Support</a>
-	<a href="#" class="menub" data-page="blog">Blog</a>
-	<a href="#" class="menub" data-page="projects">Projects</a>
-	<a href="#" class="menub" data-page="extra">Extra</a>
-	</nav>
-	
-	</div>
-	<script src="js/index.js"></script>
+    <nav class="menu">
+        <a href="#" class="menub" data-page="about">About Me</a>
+        <a href="#" class="menub" data-page="contact">Contact Me</a>
+        <a href="#" class="menub" data-page="order">Order</a>
+        <a href="#" class="menub" data-page="support">Support</a>
+        <a href="#" class="menub" data-page="blog">Blog</a>
+        <a href="#" class="menub" data-page="projects">Projects</a>
+        <a href="#" class="menub" data-page="extra">Extra</a>
+    </nav>
+</div>
+
+<!-- Templates -->
+<template id="about">
+    <p class="cont">
+        <span class="title">About Me</span>
+        Amir is a developer and poet with a deep passion for robotics and literature.
+    </p>
+</template>
+
+<template id="contact">
+    <p class="cont">
+        <span class="title">Contact Amir</span><br>
+        <strong>Mail:</strong> 0x49amir@gmail.com<br>
+        <strong>Telegram:</strong> t.me/amir0x49<br>
+        <strong>Instagram:</strong> @amir0x49<br>
+        <strong>Youtube:</strong> 
+        <a href="https://youtube.com/@amir0x49">youtube.com/@amir0x49</a>
+    </p>
+</template>
+
+<template id="order">
+    <p class="cont">
+        <span class="title">Order</span>
+        You can order custom projects or poetry prints through our online store.
+    </p>
+</template>
+
+<template id="support">
+    <p class="cont">
+        <span class="title">Support</span>
+        For support, contact us at support@example.com or message on Telegram.
+    </p>
+</template>
+
+<template id="blog">
+    <p class="cont">
+        <span class="title">Blog</span>
+        Check our latest posts and updates on robotics and poetry.
+    </p>
+</template>
+
+<template id="projects">
+    <p class="cont">
+        <span class="title">Projects</span>
+        List of ongoing and past projects in robotics and smart devices.
+    </p>
+</template>
+
+<template id="extra">
+    <p class="cont">
+        <span class="title">Extra</span>
+        Extra content and fun facts about Amir and his work.
+    </p>
+</template>
+
+<script src="js/index.js"></script>
 </body>
 </html>
-
-
