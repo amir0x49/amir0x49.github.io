@@ -90,6 +90,7 @@ H1 {
 .tbox {
 	width: 600px;
 	height: 300px;
+	color : black;
 	border: 1px solid black;
 	overflow-y: hidden;
 	border-radius: 10px;
@@ -170,4 +171,5 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
 
