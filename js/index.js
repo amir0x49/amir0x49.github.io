@@ -126,6 +126,34 @@ box.addEventListener("touchmove", e => {
 
     e.preventDefault();
 }, { passive: false });
+canvas.addEventListener("touchstart", e => {
+    isDragging = true;
+    startY = e.touches[0].clientY;
+    startScroll = box.scrollTop;
+}, { passive: true });
+
+canvas.addEventListener("touchmove", e => {
+    if (!isDragging) return;
+
+    const delta = e.touches[0].clientY - startY;
+    let newScroll = startScroll + delta * ((box.scrollHeight - box.clientHeight) / canvas.height);
+
+    newScroll = Math.max(0, Math.min(newScroll, box.scrollHeight - box.clientHeight));
+    box.scrollTop = newScroll;
+    range.value = newScroll;
+
+    const t = (box.scrollHeight - box.clientHeight)
+        ? newScroll / (box.scrollHeight - box.clientHeight)
+        : 0;
+
+    drawBackground(t);
+
+    e.preventDefault();
+}, { passive: false });
+
+canvas.addEventListener("touchend", () => {
+    isDragging = false;
+});
 
     // تغییر محتوا از منو
 
@@ -150,6 +178,7 @@ box.addEventListener("touchmove", e => {
 });
 
 });
+
 
 
 
