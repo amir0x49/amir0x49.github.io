@@ -80,11 +80,13 @@ H1 {
 
 /* Layout */
 .layout {
-	display: flex;
-	gap: 30px;          /* فاصله منو و باکس */
-	align-items: flex-start;
-	margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 16px;
 }
+
 
 /* Content Box */
 .tbox {
@@ -173,6 +175,7 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
 
 
 
