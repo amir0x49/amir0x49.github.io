@@ -100,6 +100,27 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("mouseup", function() {
         isDragging = false;
     });
+const area = document.getElementById("scrollArea");
+
+let startY = 0;
+let currentY = 0;
+
+area.addEventListener("touchstart", e => {
+  startY = e.touches[0].clientY;
+});
+
+area.addEventListener("touchmove", e => {
+  const y = e.touches[0].clientY;
+  const delta = startY - y;
+
+  currentY += delta;
+  currentY = Math.max(0, currentY); // جلو رفتن منفی رو بگیر
+
+  area.scrollTop = currentY;
+  startY = y;
+
+  e.preventDefault(); // خیلی مهم
+}, { passive: false });
 
     // تغییر محتوا از منو
 
@@ -124,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 });
+
 
 
 
