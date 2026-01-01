@@ -93,6 +93,7 @@ H1 {
 	color : black;
 	border: 1px solid black;
 	overflow-y: hidden;
+	touch-action: pan-y;
 	border-radius: 10px;
 	position: relative;
 	direction: ltr;
@@ -172,6 +173,7 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
 
 
 
