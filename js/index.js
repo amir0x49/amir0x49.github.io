@@ -100,6 +100,33 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("mouseup", function() {
         isDragging = false;
     });
+    let touchStartY = 0;
+let touchStartScroll = 0;
+
+box.addEventListener("touchstart", e => {
+    touchStartY = e.touches[0].clientY;
+    touchStartScroll = box.scrollTop;
+}, { passive: true });
+
+box.addEventListener("touchmove", e => {
+    const y = e.touches[0].clientY;
+    const delta = touchStartY - y;
+
+    let newScroll = touchStartScroll + delta;
+    newScroll = Math.max(0, Math.min(newScroll, box.scrollHeight - box.clientHeight));
+
+    box.scrollTop = newScroll;
+    range.value = newScroll;
+
+    const t = (box.scrollHeight - box.clientHeight)
+        ? newScroll / (box.scrollHeight - box.clientHeight)
+        : 0;
+
+    drawBackground(t);
+
+    e.preventDefault();
+}, { passive: false });
+
     // تغییر محتوا از منو
 
     const buttons = document.querySelectorAll(".menub");
@@ -123,6 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 });
+
 
 
 
